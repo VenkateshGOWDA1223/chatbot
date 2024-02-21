@@ -63,34 +63,43 @@ function processUserMessage(message) {
 }
 
 function generateBotResponse(message) {
+    // Convert the user's message and comparison strings to lowercase
+    const lowerCaseMessage = message.toLowerCase();
+
     // Hardcoded responses for pharmaceutical questions
-    switch (message.toLowerCase()) {
+    switch (lowerCaseMessage) {
         case 'hi':
-            return 'Hi!,How can i help you today?';
+            return 'Hi!, How can I help you today?';
         case 'how are you':
-            return 'I am fine and doing well,what about you?';
+            return 'I am fine and doing well, what about you?';
         case 'hello':
-            return 'Hello!,How can i help you today?';
+            return 'Hello!, How can I help you today?';
         case 'who are you':
-            return 'i am srinivasa pharmaceuticals chatbot';
+            return 'I am Srinivasa Pharmaceuticals chatbot';
         case 'what are you doing':
-            return 'i am still in learning process so kindly please cooperate with me.';
+            return 'I am still in the learning process so kindly please cooperate with me.';
         case 'founder of srinivasa pharmaceuticals':
             return 'Raj Kumar';
         case 'bye':
-            return 'leaving so soon :( .BYE';
-         case 'thank you':
-            return 'Welcome';
-         case 'gmail':
-            return 'Gmail:srinivasapharmaceuticals9@gmail.com';
+            return 'Leaving so soon :( .BYE';
+        case 'thank you':
+            return 'You are welcome';
+        case 'gmail':
+            return 'Gmail: srinivasapharmaceuticals9@gmail.com';
         case 'facebook':
-            return 'Facebook:Srinivasa Pharmaceuticals.dont forget to follow us';
+            return 'Facebook: Srinivasa Pharmaceuticals. Don\'t forget to follow us';
         case 'good':
             return 'Happy to hear that.';
         case 'instagram':
-            return 'Instagram:srinivasa_pharmaceuticals.           dont forget to follow us';
+            return 'Instagram: srinivasa_pharmaceuticals. Don\'t forget to follow us';
+        case 'whatsapp':
+            return 'Whatsapp:9482049655';
+        case 'sad':
+            return ':(';
+          case 'order':
+            return 'you can place an online oreder now';
         default:
-            return 'I am sorry, i am still lerning please cooperate.for more info email us-srinivasapharmaceuticals9@gmail.com.Follow us on:facebook and instagram ';
+            return 'I am sorry, I am still learning, please cooperate. For more info email us - srinivasapharmaceuticals9@gmail.com. Follow us on Facebook and Instagram';
     }
 }
 
